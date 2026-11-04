@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StockDesk</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: #0f1419; color: #e7edf3; text-align: center;
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .card { padding: 24px; }
+  .mark {
+    width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 16px;
+    display: grid; place-items: center; font-weight: 700; color: #1a1205;
+    background: linear-gradient(145deg, #ffc45c, #f5a524);
+  }
+  a { color: #f5a524; }
+  p { color: #8b98a5; font-size: 13px; }
+</style>
+<script>
+  /*
+    GitHub user site (root). All real traffic belongs to /stockdesk/.
+    Password reset links can land here as  https://devsodage7.github.io/#access_token=...
+    so forward the hash unchanged.
+  */
+  (function () {
+    var hash = location.hash && location.hash.length > 1 ? location.hash : '';
+    location.replace('/stockdesk/' + hash);
+  })();
+</script>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">SD</div>
+    <h1>StockDesk</h1>
+    <p>Opening the app… if nothing happens, <a href="/stockdesk/">tap here</a>.</p>
+  </div>
+</body>
+</html>

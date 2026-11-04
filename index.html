@@ -22,13 +22,14 @@
 </style>
 <script>
   /*
-    GitHub user site (root). All real traffic belongs to /stockdesk/.
+    GitHub user site (root). The app now lives on Cloudflare Workers.
     Password reset links can land here as  https://devsodage7.github.io/#access_token=...
     so forward the hash unchanged.
   */
+  var APP = 'https://stockdesk-app.devsodage-7.workers.dev/';
   (function () {
     var hash = location.hash && location.hash.length > 1 ? location.hash : '';
-    location.replace('/stockdesk/' + hash);
+    location.replace(APP + hash);
   })();
 </script>
 </head>
